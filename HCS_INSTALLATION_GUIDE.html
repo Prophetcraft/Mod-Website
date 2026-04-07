@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HCS Setup Guide</title>
+  <meta name="description" content="Important setup guide for HCS — install, configure and start the controller step by step." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="project-page hcs-page">
+
+  <div class="page-bg"></div>
+
+  <nav class="top-nav">
+    <a href="hcs.html">← Back to HCS</a>
+  </nav>
+
+  <header class="project-hero guide-hero">
+    <div class="hero-panel compact-panel">
+      <img src="img/hcs.png" alt="HCS logo" class="hero-logo guide-logo" />
+      <h1>HCS Important Setup Guide</h1>
+      <p class="subtitle">Install, configure and start the controller the right way.</p>
+    </div>
+  </header>
+
+  <main class="content-wrap">
+
+    <section class="content-card">
+      <h2>Before You Start</h2>
+      <p>
+        Don’t worry about all the folders inside the package. They are required for the
+        controller to work properly, and you do not need to modify them manually.
+      </p>
+      <p>
+        Just follow this guide and use the setup wizard. It will help you configure
+        everything step by step.
+      </p>
+    </section>
+
+    <section class="content-card">
+      <h2>What is HCS?</h2>
+      <p>
+        HCS (Hytale Control Suite) is a controller that lets you manage your Hytale server
+        from a web dashboard and Discord.
+      </p>
+      <ul class="feature-list">
+        <li>Start / Stop / Restart the server</li>
+        <li>Monitor RAM and CPU</li>
+        <li>Upload and manage mods</li>
+        <li>Receive Discord notifications</li>
+        <li>Schedule system shutdown</li>
+        <li>View logs and activity</li>
+      </ul>
+    </section>
+
+    <section class="content-card">
+      <h2>Requirements</h2>
+      <ul class="feature-list">
+        <li>Windows</li>
+        <li>Node.js installed</li>
+        <li>A Hytale server already installed</li>
+        <li>A Discord bot token</li>
+        <li>A Discord channel ID</li>
+      </ul>
+      <p>
+        All the scripts you need are inside <strong>Controller.v1.1/scripts</strong>.
+        You can also create shortcuts for the scripts you use the most.
+      </p>
+    </section>
+
+    <section class="content-card">
+      <h2>Step-by-Step Installation</h2>
+      <ol class="feature-list ordered-list">
+        <li><strong>Install</strong> — Run <strong>install.bat</strong> to install everything needed for HCS.</li>
+        <li><strong>Configure</strong> — Run <strong>configure.bat</strong> and complete the setup wizard.</li>
+        <li><strong>Start Controller</strong> — Run <strong>start.bat</strong> to launch the controller.</li>
+        <li><strong>Stop Controller</strong> — Run <strong>stop.bat</strong> whenever you need to stop it.</li>
+      </ol>
+    </section>
+
+    <section class="content-card">
+      <h2>Configuration Wizard</h2>
+      <p>The setup wizard will ask you for:</p>
+      <ul class="feature-list">
+        <li>Discord bot token</li>
+        <li>Discord channel ID</li>
+        <li>Hytale server folder</li>
+        <li>Hytale <strong>config.json</strong> path</li>
+        <li>Server start file</li>
+        <li>Dashboard URL (localhost, LAN IP or DDNS)</li>
+      </ul>
+      <p>
+        At the end of the process, the wizard creates the configuration file automatically.
+      </p>
+    </section>
+
+    <section class="content-card">
+      <h2>Starting the Controller</h2>
+      <p>
+        When you run <strong>start.bat</strong>, the controller starts and shows the controller status,
+        the log window and the dashboard URL.
+      </p>
+      <p>
+        Open the dashboard URL in your browser. Once the controller is online,
+        you can also close the CMD windows because the Node.js process keeps running in the background.
+      </p>
+    </section>
+
+    <section class="content-card">
+      <h2>Dashboard Access</h2>
+      <ul class="feature-list">
+        <li><strong>Local only:</strong> http://127.0.0.1:3000</li>
+        <li><strong>Local network:</strong> http://YOUR_LOCAL_IP:3000</li>
+        <li><strong>Public DDNS:</strong> http://your-ddns:3000</li>
+      </ul>
+    </section>
+
+    <section class="content-card">
+      <h2>Logs</h2>
+      <p>
+        Logs are stored in <strong>runtime.log</strong>.
+        The log file is cleared every time the controller starts.
+      </p>
+    </section>
+
+    <section class="content-card">
+      <h2>Important Notes</h2>
+      <ul class="feature-list">
+        <li>Do not delete the project folders.</li>
+        <li>Do not modify core files unless you know exactly what you are doing.</li>
+        <li>Always use the scripts inside the <strong>scripts</strong> folder.</li>
+        <li>The dashboard does not open automatically when the controller starts.</li>
+        <li>The controller must be running for Discord and the dashboard to work.</li>
+      </ul>
+    </section>
+
+    <section class="content-card">
+      <h2>Quick Summary</h2>
+      <ol class="feature-list ordered-list">
+        <li>Run <strong>install.bat</strong></li>
+        <li>Run <strong>configure.bat</strong></li>
+        <li>Run <strong>start.bat</strong></li>
+        <li>Open the dashboard in your browser</li>
+      </ol>
+    </section>
+
+  </main>
+
+</body>
+</html>
